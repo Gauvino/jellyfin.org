@@ -43,7 +43,7 @@ Hardware accelerated HDR to SDR tone-mapping is **only** supported on **RK3588/3
 
 ## Select SoC/VPU Hardware
 
-RK3588/3588S is currently the most recommended SoC. In addition to common codecs, it also supports **10-bit H.264 (High10)** and **AV1 decoding**, and has an H.264/HEVC **encoding speed** of up to **1080p@480fps or 4k@120fps**. Older chips may be supported but we were unable to test, such as RK356x and RK33xx. They have fairly limited encoding resolution support, as well as lacking of hardware HDR tone-mapping support. Best to check the data sheet of Rockchip SoC before purchasing a new SBC for hardware acceleration.
+RK3588/3588S is currently the most recommended SoC. In addition to common codecs, it also supports **10-bit H.264 (High10)** and **AV1 decoding**, and has an H.264/HEVC **encoding speed** of up to **1080p@480fps or 4k@120fps**. Older chips may be supported but we were unable to test, such as RK356x and RK33xx. They have fairly limited encoding resolution support, as well as lacking of hardware HDR tone-mapping support. Best to check the datasheet of Rockchip SoC before purchasing a new SBC for hardware acceleration.
 
 ### Transcode H.264
 

@@ -20,7 +20,7 @@ Some component recommendations do not change regardless of the hardware configur
 - Internet Connection: At least 20mbps upload bandwidth for remote access.<sup>2</sup>
 
 <sup>1</sup>Your largest media file times the max number of concurrent streams all your users will consume can be used as a rule of thumb for the transcoding file size. <br />
-<sup>2</sup>If you have less than 100mbps of total upload bandwidth, a bandwidth limit of 70% of your upload speed for Jellyfin is recommended. This option can be found on the dashboard.
+<sup>2</sup>If you have less than 100mbps of total upload bandwidth, a bandwidth limit of 70% of your upload speed for Jellyfin is recommended. This option can be found in the dashboard.
 
 ### Hardware Encoder Quality
 
@@ -79,11 +79,11 @@ The CPU will be responsible for many tasks, notably:
 
 Audio codecs are very lightweight, and most CPUs should be able to handle them without issues (Ryzen 5950X FLAC -> AAC transcoding runs at ~110x real time). Please note that they will only use one core.
 
-Video in unsupported codecs is usually the older formats that are easier to decode. Assuming hardware acceleration is properly configured, any modern CPU with 4 threads should be able to handle the workload.
+Video in unsupported codecs is usually older formats that are easier to decode. Assuming hardware acceleration is properly configured, any modern CPU with 4 threads should be able to handle the workload.
 
 However, newer codecs can also require software decoding if there are no available hardware decoders. HEVC, VP9 and AV1 can be **VERY** demanding even on modern CPUs if hardware acceleration isn't available. This is why a hardware platform capable of HEVC 10bit hardware decoding is strongly recommended.
 
-In our custom `jellyfin-ffmpeg` fork, the dav1d decoder is enabled, leading to faster software decoding compared to HEVC or VP9. However, it will still use significantly more resources compared to software decoding H.264 or older codecs. Since we have a more efficient AV1 software decoder, and AV1 media aren't common yet, you shouldn't worry about AV1 when shopping for hardware.
+In our custom `jellyfin-ffmpeg` fork, the dav1d decoder is enabled, leading to faster software decoding compared to HEVC or VP9. However, it will still use significantly more resources compared to software decoding H.264 or older codecs. Since we have a more efficient AV1 software decoder, and AV1 media isn't common yet, you shouldn't worry about AV1 when shopping for hardware.
 
 #### Integrated Graphics
 
@@ -140,13 +140,13 @@ If you are planning to use Linux with Intel 12/13th Gen integrated graphics or A
 
 Please refer to [this table](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new) for supported codecs.
 
-Certain low end cards (e.g. GT 1030) don't have the encoding hardware. Please be careful when choosing a GPU.
+Certain low end cards (e.g. GT 1030) don't have encoding hardware. Please be careful when choosing a GPU.
 
 #### AMD Graphics
 
 AMD graphics is not recommended for Jellyfin, but the information is still provided for convenience. Please refer to [this article](https://en.wikipedia.org/wiki/Video_Coding_Engine) for supported codecs.
 
-Certain low end cards (e.g. RX 6400, RX 6500) don't have the encoding hardware. Please be careful when choosing a GPU.
+Certain low end cards (e.g. RX 6400, RX 6500) don't have encoding hardware. Please be careful when choosing a GPU.
 
 Many AMD CPUs don't have integrated graphics. These are intended to be used with a dedicated graphics card.
 

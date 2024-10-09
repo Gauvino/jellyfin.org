@@ -50,7 +50,7 @@ Utilizing a Raspberry Pi (or other small form factor computer) it's possible to 
    sudo apt install mopidy mopidy-mpd gstreamer1.0-plugins-bad python3-pip
    ```
 
-5. Install the Jellyfin extension, and any other Mopidy related packages you may want:
+5. Install the Jellyfin extension and any other Mopidy related packages you may want:
 
    ```sh
    sudo pip3 install mopidy-jellyfin mopidy-musicbox-webclient
@@ -81,7 +81,7 @@ albumartistsort = False (Optional: will default to True if left undefined)
 album_format = {ProductionYear} - {Name} (Optional: will default to "{Name}" if left undefined)
 ```
 
-- `libraries` determines what is populated into Mopidy's internal library (view by Artists/Album/etc). Using the file browser will show all music or book libraries in the Jellyfin server
+- `libraries` determines what is populated into Mopidy's internal library (view by Artists/Album/etc.). Using the file browser will show all music or book libraries in the Jellyfin server
 - `albumartistsort` changes whether the media library populates based on "Artist" or "Album Artist" metadata
 - `album_format` can be used to change the display format of music albums when using the file browser view. Currently the only really usable fields are ProductionYear and Name
 

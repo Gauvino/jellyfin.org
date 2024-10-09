@@ -335,7 +335,7 @@ Root permission is required.
    sudo systemctl restart jellyfin
    ```
 
-5. Check the version of `intel-opencl-icd` that the Linux distro provides:
+5. Check the version of `intel-opencl-icd`, the Linux distro provides:
 
    ```shell
    $ apt policy intel-opencl-icd
@@ -850,7 +850,7 @@ Root permission is required.
      sudo cp -r linux-firmware/i915 /usr/lib/firmware
      ```
 
-2. Add the required i915 kernel parameter to the host system to enable loading GuC and HuC firmware:
+2. Add the required i915 kernel parameter on the host system to enable loading GuC and HuC firmware:
 
    ```shell
    sudo mkdir -p /etc/modprobe.d

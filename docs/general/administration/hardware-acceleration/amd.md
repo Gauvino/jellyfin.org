@@ -255,7 +255,7 @@ Root permission is required.
    ...
    ```
 
-   `VAEntrypointVLD` means that your card is capable to decode this format, `VAEntrypointEncSlice` means that you can encode this format.
+   `VAEntrypointVLD` means that your card is capable to decode this format, `VAEntrypointEncSlice` means that you can encode to this format.
 
    | Jellyfin Setting | VA-API Profil                                                                                          |
    | ---------------- | ------------------------------------------------------------------------------------------------------ |

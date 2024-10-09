@@ -11,7 +11,7 @@ In `Dashboard > General`, the "Custom CSS" field can be used to override current
 
 If you have little or no experience with CSS, various resources and tutorials can be found online. Using the tweaks and examples below makes it quite easy to get started with making your own changes to your Jellyfin instance.
 
-![Screenshot of the 'Custom CSS' setting on the administrator dashboard of the web client](/images/docs/custom-css-customcssfield.png)
+![Screenshot of the 'Custom CSS' setting in the administrator dashboard of the web client](/images/docs/custom-css-customcssfield.png)
 
 ## General Information About CSS
 
@@ -19,7 +19,7 @@ You can learn more about CSS using sites like [w3schools](https://www.w3schools.
 
 ### Colors
 
-CSS support multiple color formats, but typically the hex color codes are used for specific colors. To get a specific color, exact color data such as the hex codes below have to be used.
+CSS supports multiple color formats, but typically the hex color codes are used for specific colors. To get a specific color, exact color data such as the hex codes below have to be used.
 
 Some examples of hex color codes:
 
@@ -227,7 +227,7 @@ div.starRatingContainer {
 }
 ```
 
-### Replace Latest TV Show text with Custom Text such as "Recently Added TV Shows"
+### Replace Latest TV Shows text with Custom Text such as "Recently Added TV Shows"
 
 ```css
 #homeTab
@@ -791,7 +791,7 @@ Keep in mind that these posts may have been made under previous versions of Jell
 ### Community Themes
 
 - [Ultrachromic - A custom theme for Jellyfin media server created using CSS overrides](https://github.com/CTalvio/Ultrachromic)
-- [JellySkin - Vibrant Jellyfin theme with a lot a animation](https://github.com/prayag17/JellySkin)
+- [JellySkin - Vibrant Jellyfin theme with a lot a animations](https://github.com/prayag17/JellySkin)
 - [JellyFlix - The Best Netflix Clone for Jellyfin](https://github.com/prayag17/JellyFlix)
 - [Jellyfin Netflix Dark - The Best Netflix Dark Theme for Jellyfin Around!](https://github.com/DevilsDesigns/Jellyfin-Netflix-Dark)
 - [Dark and Green - A Emby like night mode skin](https://github.com/mbcooper83/jellyfin-css-darkandgreen)
