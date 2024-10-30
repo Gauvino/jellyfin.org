@@ -15,7 +15,7 @@ On Windows **AMF** is the only available method.
 
 On Linux, there are two methods:
 
-- **VA-API** - Preferred on all GPUs, full acceleration on Vega+ GPUs, open source.
+- **VA-API** - Preferred on all GPUs, full acceleration on Polaris(RX400/500)+ GPUs, open source.
 
 - **AMF** - Not recommended, limited support, hardware encoder only, closed source.
 
@@ -81,13 +81,7 @@ The HEVC support on AMD is complicated:
 
 - **Decoding HEVC 10-bit** - Radeon RX 400 series (Polaris) and newer
 
-- **Encoding HEVC 10-bit** - Ryzen 4000 series APU (Renoir), Radeon RX 5700 series (Navi 1x) and newer
-
-:::note
-
-Note that even though the RX 400 series has HEVC 10-bit decoding support, it doesn't support the [DRM-Vulkan format modifier](https://gitlab.freedesktop.org/mesa/mesa/-/issues/5882), which means full hardware acceleration is not possible for these cards on Linux for the time being. A Vega or newer GPU is recommended on Linux.
-
-:::
+- **Encoding HEVC 10-bit** - Ryzen 4000 series APU (Renoir), Radeon RX 5000 series (Navi 1x) and newer
 
 ### Transcode AV1
 
@@ -300,7 +294,7 @@ Root permission is required.
 
 Linux Mint uses Ubuntu as its package base.
 
-You can follow the configuration steps of [Debian And Ubuntu Linux](/docs/general/administration/hardware-acceleration/amd#debian-and-ubuntu-linux) but install all Jellyfin packages `jellyfin-server`, `jellyfin-web` and `jellyfin-ffmpeg6` manually from the [Jellyfin Server Releases Page](https://repo.jellyfin.org/releases/server/). Also, make sure you choose the correct codename by following the [official version maps](https://linuxmint.com/download_all.php).
+You can follow the configuration steps of [Debian And Ubuntu Linux](/docs/general/administration/hardware-acceleration/amd#debian-and-ubuntu-linux) but install all Jellyfin packages `jellyfin-server`, `jellyfin-web` and `jellyfin-ffmpeg7` manually from the [Jellyfin Server Releases Page](https://repo.jellyfin.org/releases/server/). Also, make sure you choose the correct codename by following the [official version maps](https://linuxmint.com/download_all.php).
 
 #### Arch Linux
 
