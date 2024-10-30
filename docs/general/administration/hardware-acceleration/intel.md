@@ -5,7 +5,7 @@ title: Intel GPU
 
 # HWA Tutorial On Intel GPU
 
-This tutorial guides you on setting up full video hardware acceleration on Intel integrated GPUs and ARC discrete GPUs via QSV and VA-API.
+This tutorial guides you on setting up full video hardware acceleration on Intel integrated GPUs and ARC discrete GPUs via QSV and VA-API. If you are on macOS, please use [VideoToolbox](/docs/general/administration/hardware-acceleration/apple) instead.
 
 ## Acceleration Methods
 
@@ -15,7 +15,7 @@ On Windows **QSV** is the only available method.
 
 On Linux, there are two methods:
 
-- **QSV** - **Prefered on mainstream GPUs**, for better performance
+- **QSV** - **Preferred on mainstream GPUs**, for better performance
 
 - **VA-API** - Required by pre-Broadwell legacy GPUs, for compatibility
 
@@ -23,35 +23,21 @@ On Linux, there are two methods:
 
 Linux VA-API supports nearly all Intel GPUs.
 
-Linux QSV [supported platforms](https://github.com/intel/media-driver#supported-platforms) are limited to:
-
-- **BDW** (Broadwell)
-
-- **SKL** (Skylake)
-
-- **BXTx** (BXT: Broxton, APL: Apollo Lake, GLK: Gemini Lake)
-
-- **KBLx** (KBL: Kaby Lake, CFL: Coffe Lake, WHL: Whiskey Lake, CML: Comet Lake, AML: Amber Lake)
-
-- **ICL** (Ice Lake)
-
-- **JSL** (Jasper Lake) / **EHL** (Elkhart Lake)
-
-- **TGLx** (TGL: Tiger Lake, RKL: Rocket Lake, ADL-S/P/N: Alder Lake, RPL-S/P: Raptor Lake)
-
-- **DG1**/**SG1**
-
-- Alchemist (**DG2**)/ATSM
-
-- Meteor Lake (**MTL**)
-
-- Future platforms...
+Linux QSV [supported platforms](https://github.com/intel/media-driver#supported-platforms) are limited to Broadwell (5th gen Core) and newer.
 
 :::
 
 The QSV interface provided by Intel [OneVPL](https://github.com/intel/vpl-gpu-rt) / [MediaSDK](https://github.com/Intel-Media-SDK/MediaSDK) is a high-level implementation based on Linux VA-API and Windows DXVA/D3D11VA providing better performance and more fine-tuning options on supported platforms.
 
 QSV can be used together with VA-API and DXVA/D3D11VA for a more flexible hybrid transcoding pipeline.
+
+:::caution
+
+**ICL** (Ice Lake) / **JSL** (Jasper Lake) / **EHL** (Elkhart Lake) and older generations are losing support for QSV on Linux, since the MediaSDK runtime has been deprecated by Intel, and may stop working in a few years, by which point you will have to switch to VA-API. Please use newer hardware if you are shopping for hardware.
+
+Please read [deprecation notice](https://github.com/Intel-Media-SDK/MediaSDK) and [legacy platforms support](https://github.com/intel/compute-runtime/blob/master/LEGACY_PLATFORMS.md) for more info.
+
+:::
 
 :::note
 
@@ -109,13 +95,13 @@ HEVC / H.265 remains the first choice for storing 4K 10-bit, HDR and Dolby Visio
 
 Intel GPUs are no exception:
 
-- **Decoding & Encoding HEVC 8-bit** - Gen 9 Sky Lake (6th Gen Core) and newer
+- **Decoding & Encoding HEVC 8-bit** - Gen 9 Skylake (6th Gen Core) and newer
 
 - **Decoding & Encoding HEVC 10-bit** - Gen 9.5 Kaby Lake (7th Gen Core), Apollo Lake, Gemini Lake (Pentium and Celeron) and newer
 
 :::note
 
-Note that the 6th Gen Core lacks 10-bit support, it's best to choose 7th Gen and newer processors, which usually have HD / UHD 6xx series iGPU.
+Note that the 6th Gen Core with HD 5xx iGPUs lacks 10-bit support, it's best to choose 7th Gen and newer processors, which usually have HD / UHD 6xx series iGPUs.
 
 :::
 
@@ -283,7 +269,7 @@ Please refer to [this section](/docs/general/administration/hardware-acceleratio
 
 #### Debian And Ubuntu Linux
 
-The `jellyfin-ffmpeg6` deb package comes with all necessary user mode Intel media drivers except OpenCL (see below).
+The `jellyfin-ffmpeg*` deb package comes with all necessary user mode Intel media drivers except OpenCL (see below).
 
 :::note
 
@@ -297,10 +283,10 @@ Root permission is required.
    If you are running Debian, you will need to add "non-free" to your apt config.
    :::
 
-2. Install the `jellyfin-ffmpeg6` package. Remove the deprecated `jellyfin` meta package if it breaks the dependencies:
+2. Install the `jellyfin-ffmpeg7` package. Remove the deprecated `jellyfin` meta package if it breaks the dependencies:
 
    ```shell
-   sudo apt update && sudo apt install -y jellyfin-ffmpeg6
+   sudo apt update && sudo apt install -y jellyfin-ffmpeg7
    ```
 
 3. Make sure at least one `renderD*` device exists in `/dev/dri`. Otherwise, upgrade your kernel or enable the iGPU in the BIOS.
@@ -527,7 +513,7 @@ What you need to do is pass the host's `render` group id to Docker and modify th
          image: jellyfin/jellyfin
          user: 1000:1000
          group_add:
-           - "122" # Change this to match your "render" host group id and remove this comment
+           - '122' # Change this to match your "render" host group id and remove this comment
          network_mode: 'host'
          volumes:
            - /path/to/config:/config
@@ -588,19 +574,19 @@ The devices in Kubernetes are added as host path mounts, they are not separated 
            supplementalGroups:
              - 122 # Change this to match your "render" host group id and remove this comment
          containers:
-           - name: "jellyfin"
+           - name: 'jellyfin'
              image: ...
              ports: ...
              env: ...
              securityContext:
                privileged: true # Container must run as privileged inside of the pod
              volumeMounts:
-               - name: "render-device"
-                 mountPath: "/dev/dri/renderD128"
+               - name: 'render-device'
+                 mountPath: '/dev/dri/renderD128'
          volumes:
-           - name: "render-device"
+           - name: 'render-device'
              hostPath:
-               path: "/dev/dri/renderD128"
+               path: '/dev/dri/renderD128'
    ```
 
 2. When the pod starts, you can check the QSV and VA-API codecs.

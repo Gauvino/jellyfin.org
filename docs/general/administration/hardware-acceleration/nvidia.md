@@ -151,13 +151,13 @@ Refer to [Configure On Linux Host](/docs/general/administration/hardware-acceler
 
 ## Linux Setups
 
-A 64-bit Linux distribution is required. **In Jellyfin 10.9 the minimum required NVIDIA driver version is 520.56.06**.
+A 64-bit Linux distribution is required. **In Jellyfin 10.10 the minimum required NVIDIA driver version is 520.56.06**.
 
 ### Configure On Linux Host
 
 #### Debian And Ubuntu Linux
 
-The `jellyfin-ffmpeg6` deb package required by Jellyfin 10.9 doesn't include any NVIDIA proprietary driver.
+The `jellyfin-ffmpeg*` deb package required by Jellyfin doesn't include any NVIDIA proprietary driver.
 
 You have to install the NVIDIA driver from the distro and configure the permission of the `jellyfin` user.
 
@@ -169,10 +169,10 @@ Root permission is required.
 
 1. Assuming you have added the jellyfin repository to your apt source list and installed the `jellyfin-server` and `jellyfin-web`.
 
-2. Install the `jellyfin-ffmpeg6` package. Remove the deprecated `jellyfin` meta package if it breaks the dependencies:
+2. Install the `jellyfin-ffmpeg7` package. Remove the deprecated `jellyfin` meta package if it breaks the dependencies:
 
    ```shell
-   sudo apt update && sudo apt install -y jellyfin-ffmpeg6
+   sudo apt update && sudo apt install -y jellyfin-ffmpeg7
    ```
 
 3. Install the NVIDIA proprietary driver by following these links. Then install two extra packages for NVENC and NVDEC support:
@@ -348,7 +348,9 @@ Root permission is required.
            resources:
              reservations:
                devices:
-                 - capabilities: [gpu]
+                 - driver: nvidia
+                   count: all
+                   capabilities: [gpu]
      ```
 
    :::note

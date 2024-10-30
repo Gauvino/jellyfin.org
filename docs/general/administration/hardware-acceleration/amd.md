@@ -5,7 +5,7 @@ title: AMD GPU
 
 # HWA Tutorial On AMD GPU
 
-This tutorial guides you on setting up full video hardware acceleration on AMD integrated GPU and discrete GPU via AMF and VA-API.
+This tutorial guides you on setting up full video hardware acceleration on AMD integrated GPU and discrete GPU via AMF or VA-API. If you are on macOS, please use [VideoToolbox](/docs/general/administration/hardware-acceleration/apple) instead.
 
 ## Acceleration Methods
 
@@ -187,7 +187,7 @@ Please refer to [this section](/docs/general/administration/hardware-acceleratio
 
 #### Debian And Ubuntu Linux
 
-The `jellyfin-ffmpeg6` deb package required by Jellyfin 10.9 comes with all necessary user mode Mesa drivers.
+The `jellyfin-ffmpeg*` deb package required by Jellyfin comes with all necessary user mode Mesa drivers.
 
 Besides that you only need to configure the permission of the `jellyfin` user.
 
@@ -199,10 +199,10 @@ Root permission is required.
 
 1. Assuming you have added the jellyfin repository to your apt source list and installed the `jellyfin-server` and `jellyfin-web`.
 
-2. Install the `jellyfin-ffmpeg6` package. Remove the deprecated `jellyfin` meta package if it breaks the dependencies:
+2. Install the `jellyfin-ffmpeg7` package. Remove the deprecated `jellyfin` meta package if it breaks the dependencies:
 
    ```shell
-   sudo apt update && sudo apt install -y jellyfin-ffmpeg6
+   sudo apt update && sudo apt install -y jellyfin-ffmpeg7
    ```
 
 3. Make sure at least one `renderD*` device exists in `/dev/dri`. Otherwise, upgrade your kernel or enable the iGPU in the BIOS.
@@ -435,7 +435,7 @@ Root permission is required.
          image: jellyfin/jellyfin
          user: 1000:1000
          group_add:
-           - "122" # Change this to match your "render" host group id and remove this comment
+           - '122' # Change this to match your "render" host group id and remove this comment
          network_mode: 'host'
          volumes:
            - /path/to/config:/config
