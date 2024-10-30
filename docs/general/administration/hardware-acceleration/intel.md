@@ -141,7 +141,7 @@ They can be divided into 4 tiers by their performance：
 
   :::tip
 
-  These iGPUs usually come from mini PC boxes or Synology NASes, and they can transcode HEVC 10-bit and apply tone-mapping filters. You can't expect much due to performance and power constraints, but it's still adequate for personal use.
+  These iGPUs usually come from mini PC boxes or NASes, and they can transcode HEVC 10-bit and apply tone-mapping filters. You can't expect much due to performance and power constraints, but it's still adequate for personal use.
 
   :::
 
@@ -179,7 +179,7 @@ Intel supports OneVPL on Gen 12+ graphics (11th Gen Core and newer processor, na
 
 - The most notable difference is that OneVPL supports the new AV1 hardware encoder on ARC GPU.
 
-- [FFmpeg 6.0](http://ffmpeg.org/download.html#release_6.0) enables OneVPL. This process is seamless to the end users.
+- [FFmpeg 6.0](http://ffmpeg.org/download.html#release_6.0) enables OneVPL. This process is seamless for the end users.
 
 :::
 
@@ -321,7 +321,7 @@ Root permission is required.
    sudo systemctl restart jellyfin
    ```
 
-5. Check the version of `intel-opencl-icd`, the Linux distro provides:
+5. Check the version of `intel-opencl-icd` thats the Linux distro provides:
 
    ```shell
    $ apt policy intel-opencl-icd
@@ -382,7 +382,7 @@ Root permission is required.
 
 Linux Mint uses Ubuntu as its package base.
 
-You can follow the configuration steps of [Debian And Ubuntu Linux](/docs/general/administration/hardware-acceleration/intel#debian-and-ubuntu-linux) but install all Jellyfin packages `jellyfin-server`, `jellyfin-web` and `jellyfin-ffmpeg6` manually from the [Jellyfin Server Releases Page](https://repo.jellyfin.org/releases/server/). Also, make sure you choose the correct codename by following the [official version maps](https://linuxmint.com/download_all.php).
+You can follow the configuration steps of [Debian And Ubuntu Linux](/docs/general/administration/hardware-acceleration/intel#debian-and-ubuntu-linux) but install all Jellyfin packages `jellyfin-server`, `jellyfin-web` and `jellyfin-ffmpeg7` manually from the [Jellyfin Server Releases Page](https://repo.jellyfin.org/releases/server/). Also, make sure you choose the correct codename by following the [official version maps](https://linuxmint.com/download_all.php).
 
 #### Arch Linux
 
@@ -513,7 +513,7 @@ What you need to do is pass the host's `render` group id to Docker and modify th
          image: jellyfin/jellyfin
          user: 1000:1000
          group_add:
-           - '122' # Change this to match your "render" host group id and remove this comment
+           - "122" # Change this to match your "render" host group id and remove this comment
          network_mode: 'host'
          volumes:
            - /path/to/config:/config
@@ -574,19 +574,19 @@ The devices in Kubernetes are added as host path mounts, they are not separated 
            supplementalGroups:
              - 122 # Change this to match your "render" host group id and remove this comment
          containers:
-           - name: 'jellyfin'
+           - name: "jellyfin"
              image: ...
              ports: ...
              env: ...
              securityContext:
                privileged: true # Container must run as privileged inside of the pod
              volumeMounts:
-               - name: 'render-device'
-                 mountPath: '/dev/dri/renderD128'
+               - name: "render-device"
+                 mountPath: "/dev/dri/renderD128"
          volumes:
-           - name: 'render-device'
+           - name: "render-device"
              hostPath:
-               path: '/dev/dri/renderD128'
+               path: "/dev/dri/renderD128"
    ```
 
 2. When the pod starts, you can check the QSV and VA-API codecs.

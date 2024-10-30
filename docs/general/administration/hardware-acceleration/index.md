@@ -117,18 +117,6 @@ Click [Apple Mac](/docs/general/administration/hardware-acceleration/apple).
 
 Click [Rockchip VPU](/docs/general/administration/hardware-acceleration/rockchip).
 
-### Raspberry Pi V4L2
-
-:::caution
-
-As of **Jellyfin 10.8** hardware acceleration on Raspberry Pi via `OpenMAX OMX` was dropped and is no longer available.
-
-This decision was made because Raspberry Pi is currently migrating to a `V4L2` based hardware acceleration, which is already available in Jellyfin but does not support all features other hardware acceleration methods provide due to lacking support in FFmpeg. Jellyfin will fallback to software de/encoding for those use cases.
-
-The current state of hardware acceleration support in FFmpeg can be checked on the [rpi-ffmpeg repository](https://github.com/jc-kynesim/rpi-ffmpeg).
-
-:::
-
 ## Enable Hardware Acceleration
 
 Hardware acceleration options can be found in the Admin Dashboard under the **Transcoding** section of the **Playback** tab.
@@ -170,7 +158,9 @@ Dolby Vision (P5 & P8) to SDR tone-mapping is supported in Jellyfin 10.8 and req
 
   :::tip
 
-  The hardware decoding of H.264 / AVC 10-bit (High 10 profile) video is not supported by any Intel, NVIDIA and AMD GPU. Jellyfin will always fall back to software decoding for it. Consider upgrading such video to H.265 / HEVC 10-bit (Main 10 profile).
+  The hardware decoding of H.264 / AVC 10-bit (High 10 profile) video is not supported by any Intel, NVIDIA and AMD GPU.
+  It is only supported by Apple Silicon and Rockchip. Jellyfin will fall back to software decoding for it when there is
+  no hardware decoder available. Consider upgrading such video to H.265 / HEVC 10-bit (Main 10 profile).
 
   :::
 
