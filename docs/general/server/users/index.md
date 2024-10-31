@@ -15,7 +15,7 @@ To add another administrator, you can simply check the box labeled `allow this u
 
 ### Playback
 
-You can allow transcoding audio and video individually to prevent certain people from using too much system resources. There is also an option to enable video playback that does not require encoding. This is much less CPU intensive and will often fix playback issues on devices that do not support newer video formats.
+You can allow for transcoding audio and video individually to prevent certain people from using too much system resources. There is also an option to enable video playback that does not require encoding. This is much less CPU intensive and will often fix playback issues on devices that do not support newer video formats.
 
 ### Deletion
 

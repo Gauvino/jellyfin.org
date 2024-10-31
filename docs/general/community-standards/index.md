@@ -5,7 +5,7 @@ title: Community Standards
 
 # Jellyfin Community Standards
 
-This document outlines the standards by which all participants in the Jellyfin community, be it a user or a contributor, on all possible platforms, must adhere.
+This document outlines the standards by which all participants in the Jellyfin community, be it, a user or a contributor, on all possible platforms, must adhere.
 
 ## Mission Statement
 
@@ -31,7 +31,7 @@ At all times when interacting with the Jellyfin community via any method (Matrix
 
 - Jellyfin is created exclusively by volunteers, as set out in our Mission Statement. Since they are freely giving their time and effort, **no volunteer contributor owes anything whatsoever to any other contributor, any user, or the project itself**. Contributors are free to come and go as they please, to work on and give attention to what they deem interesting or important, and to respond or not respond to anything they wish. **Do not badger volunteers** in any way about any topic.
 
-- If you have questions to ask of the community, **please choose the appropriate location** (see our [Getting Help](/docs/general/getting-help) page) and **ask your question in full, immediately, with as much detail as possible**. Authorship issues aside, [Asking Questions the Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html) are a valuable resource and is recommended reading before engaging with any free and open source community, including ours. **Do not pester or harass** community members for help or to answer questions. **Do not require others to pry information** out of you. **Do not spam questions**; They will be answered when they are answered.
+- If you have questions to ask of the community, **please choose the appropriate location** (see our [Getting Help](/docs/general/getting-help) page) and **ask your question in full, immediately, with as much detail as possible**. Authorship issues aside, [Asking Questions the Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html) is a valuable resource and is recommended reading before engaging with any free and open source community, including ours. **Do not pester or harass** community members for help or to answer questions. **Do not require others to pry information** out of you. **Do not spam questions**; They will be answered when they are answered.
 
 ## Dispute Resolution and Moderation
 

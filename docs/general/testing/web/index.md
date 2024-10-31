@@ -19,7 +19,7 @@ Each pull request of [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) an
    Some pull requests might not have this comment, or the link might otherwise not work. To test out these pull requests, they will have to be built manually.
    :::
 
-3. Clicking on the link in the comment will open an instance of the client you are testing. For Jellyfin Web, it will be linked automatically to our demo server. For Jellyfin Vue, you can connect to the demo server to this address: `https://demo.jellyfin.org/unstable/`. The credentials will be provided on the login page.
+3. Clicking on the link in the comment will open an instance of the client you are testing. For Jellyfin Web, it will be linked automatically to our demo server. For Jellyfin Vue, you can connect to the demo server with this address: `https://demo.jellyfin.org/unstable/`. The credentials will be provided on the login page.
 
    If you wish to connect to a different server, click the `Change Server` button in the apps on the login screen. Alternatively, enter a different server address in Jellyfin Vue when first prompted to add a server.
 

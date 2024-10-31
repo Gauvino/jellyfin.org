@@ -39,24 +39,24 @@ Jellyfin is a maze of clients, plugins, and other useful projects. These source 
 23. apiclient: `files used for generating the axios API client`
 24. deployment: `files used while building Jellyfin for different plattforms`
 25. tests: `multiple Unit Test projects testing Jellyfin functionality`
-26. Dockerfile.\* `Dockerfiles defining the Jellyfin Docker image`
+26. Dockerfile.* `Dockerfiles defining the Jellyfin Docker image`
 
 ## [Web Client](https://github.com/jellyfin/jellyfin-web)
 
 1. src:
-   - assets: `images, styles, splash screens, and any other static assets`
-     - css: `all global stylesheets used throughout the client`
-     - img: `images for things like device icons and logos`
-     - splash: `progressive web apps will show these splash screens`
-   - components: `custom elements used for different sections of the user interface`
-     - playerstats.js: `display playback info in browsers and other clients that include the web source`
-   - controllers: `scripts that handle the logic for different pages`
-   - elements: `custom UI components that are used globally such as buttons or menus`
-   - legacy: `currently used for all polyfills and scripts related to backwards compatibility`
-   - libraries: `dependencies that we eventually want to remove and include during the build step`
-   - scripts: `any script that isn't tied to a UI element or page but rather general functionality`
-   - strings: `translations for the entire interface`
-   - themes: `custom and bundled themes can be found here in their own directories`
+    - assets: `images, styles, splash screens, and any other static assets`
+        - css: `all global stylesheets used throughout the client`
+        - img: `images for things like device icons and logos`
+        - splash: `progressive web apps will show these splash screens`
+    - components: `custom elements used for different sections of the user interface`
+        - playerstats.js: `display playback info in browsers and other clients that include the web source`
+    - controllers: `scripts that handle the logic for different pages`
+    - elements: `custom UI components that are used globally such as buttons or menus`
+    - legacy: `currently used for all polyfills and scripts related to backwards compatibility`
+    - libraries: `dependencies that we eventually want to remove and include during the build step`
+    - scripts: `any script that isn't tied to a UI element or page but rather general functionality`
+    - strings: `translations for the entire interface`
+    - themes: `custom and bundled themes can be found here in their own directories`
 
 ## [Kodi](https://github.com/jellyfin/jellyfin-kodi)
 

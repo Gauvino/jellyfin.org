@@ -42,7 +42,7 @@ Go [here](https://www.w3schools.com/colors/colors_names.asp) for a list of color
 ### Comments
 
 A section of code or text in-between `/*` and `*/` indicates a comment, and will be ignored.
-This allows you to add descriptions to any particular section of code.
+This allows you to add descriptions for any particular section of code.
 It can also be used to disable code without deleting it.
 
 `/* This might be added above code to tell you what it does */`
@@ -269,7 +269,7 @@ div.starRatingContainer {
 }
 ```
 
-### Background Image on Home page
+### Background Image on Homepage
 
 ```css
 .backdropImage {
@@ -400,7 +400,7 @@ This will drastically change the style of cast info into something very similar 
 #castContent .cardScalable {width: 3.8cm !important; height: 3.8cm !important; border-radius: 2.5cm;}
 #castContent .cardOverlayContainer.itemAction {border-radius: 2.5cm;}
 
-/* Center the mouse over buttons */
+/* Center the mouseover buttons */
 #castContent .cardOverlayButton-br {bottom: 4%; right: 15%; width: 70%;}
 #castContent .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light {margin:auto;}
 ```

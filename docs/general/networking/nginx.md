@@ -343,7 +343,7 @@ server {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection $http_connection;
 
-        # , when the nginx proxy gets very resource heavy upon streaming
+        # Disable buffering, when the nginx proxy gets very resource heavy upon streaming
         proxy_buffering off;
     }
 

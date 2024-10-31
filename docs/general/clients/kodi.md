@@ -174,7 +174,7 @@ JellyCon behaves more like a standard Kodi streaming add-on. Media is accessed p
    - Choose "Kodi Jellyfin Add-ons", followed by "Video Add-ons"
    - Select the JellyCon add-on and choose install
 2. Within a few seconds you should be prompted for your server details.
-   - If a Jellyfin server is detected on your local network, it will be displayed in a dialog
+   - If a Jellyfin server is detected on your local network, it will be displayed in a dialog. Otherwise, you will be prompted for a URL
    - Select a user from the list, or Manual Login to type in a username/password
 
 ### Configuring Home
@@ -185,7 +185,7 @@ Many Kodi skins allow for customizing of the home menu with custom nodes and wid
 
 If you would like a link on the home screen to open a library in your Jellyfin server called "Kid's Movies", you would point the menu item to the path: `Add-On -> Video Add-On -> JellyCon -> Jellyfin Libraries -> Kid's Movies -> Create a menu item in here`.
 
-Beyond just modifying where the home menu headers go, many skins also allow you to use widgets. Widgets help populate the home screen with data, often the posters of media with the selected image. If you would like to display the most recent movies across all of your Jellyfin libraries on the home screen, the path would be: `Add-On -> Video Add-On -> JellyCon -> Global Lists -> Movies -> Movies - Recently Added (20) -> Use as widget`
+Beyond just modifying where the home menu headers go, many skins also allow you to use widgets. Widgets help populate the home screen with data, often the posters of media in the selected image. If you would like to display the most recent movies across all of your Jellyfin libraries on the home screen, the path would be: `Add-On -> Video Add-On -> JellyCon -> Global Lists -> Movies -> Movies - Recently Added (20) -> Use as widget`
 
 Another common use case of widgets would be to display the next available episodes of shows that you may be watching. As above, this can be done both with individual libraries or with all libraries combined:
 

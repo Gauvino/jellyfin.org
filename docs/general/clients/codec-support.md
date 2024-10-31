@@ -32,7 +32,7 @@ The goal is to Direct Play all media. This means the container, video, audio and
 <br />
 <sup>4</sup>Needs at least Android TV 10.
 <br />
-<sup>5</sup>As of <a href="https://github.com/jellyfin/jellyfin-androidtv/pull/671">version 0.12</a>, HEVC is enabled on all devices running Android 5.0+, but earlier generations of the Amazon Fire may not work yet. 10Bit may be supported depending on your device. Before Client 0.12, HEVC support was enabled on specific devices.
+<sup>5</sup>As of <a href="https://github.com/jellyfin/jellyfin-androidtv/pull/671">version 0.12</a>, HEVC is enabled on all devices running Android 5.0+, but early generations of the Amazon Fire may not work yet. 10Bit may be supported depending on your device. Before Client 0.12, HEVC support was enabled on specific devices.
 <br />
 <sup>6</sup>HEVC decoding is supported on Apple devices with the A8X chip or newer and at least iOS 14.
 <br />

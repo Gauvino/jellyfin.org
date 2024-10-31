@@ -34,7 +34,7 @@ Logging options can be configured in the file `logging.json` in the [Jellyfin co
 
 :::caution
 
-Enabling debug logging will create a **very** large amount of output; as an example, simply loading the homepage will generate over 4000 lines of logs with the debug configuration below. Leaving debug logging enabled on a production Jellyfin instance for a long period of time is not recommended, and it should be enabled only during troubleshooting.
+Enabling debug logging will create a **very** large amount of output; as an example, simply loading the homepage will generate over 4000 lines of logs with the debug configuration below. Leaving debug logging enabled on a productive Jellyfin instance for a long period of time is not recommended, and it should be enabled only during troubleshooting.
 
 :::
 
@@ -150,7 +150,7 @@ UPDATE Permissions SET Value = 0 WHERE Kind = 2 AND UserId IN (SELECT Id FROM Us
 ### SQLiteBrowser
 
 It is also possible to use [SQLiteBrowser](https://sqlitebrowser.org) on systems with a desktop environment.
-Start by opening the database in the SQLite Browser.
+Start by opening the database inside the SQLite Browser.
 After opening the database, navigate to the Execute SQL Tab and execute the following query:
 
 ```sql

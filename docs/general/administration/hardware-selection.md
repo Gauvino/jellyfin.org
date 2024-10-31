@@ -91,7 +91,7 @@ The CPU will be responsible for many tasks, notably:
 
 Audio codecs are very lightweight, and most CPUs should be able to handle them without issues (Ryzen 5950X FLAC -> AAC transcoding runs at ~110x real time). Please note that they will only use one core.
 
-Video in unsupported codecs is usually older formats that are easier to decode. Assuming hardware acceleration is properly configured, any modern CPU with 4 threads should be able to handle the workload.
+Video in unsupported codecs are usually older formats that are easier to decode. Assuming hardware acceleration is properly configured, any modern CPU with 4 threads should be able to handle the workload.
 
 However, newer codecs can also require software decoding if there are no available hardware decoders. HEVC, VP9 and AV1 can be **VERY** demanding even on modern CPUs if hardware acceleration isn't available. This is why a hardware platform capable of HEVC 10bit hardware decoding is strongly recommended.
 
@@ -136,7 +136,8 @@ Intel is always recommended on non-apple hardware for the following reasons:
 - Intel provides a good quality encoder, slightly better than Nvidia and significantly better than AMD.
 - Intel drivers and the compute environment are much easier to setup than both Nvidia and AMD
 
-AMD is not recommended because of poor quality H.264 and H.265(HEVC) output, as well as being hard to setup the compute environment. While AMD has significantly improved AV1 encoder quality. However, you are still more likely to transcode to H.264 or H.265 than AV1 due to compatibility.
+AMD is not recommended due to the poor quality of H.264 and H.265 (HEVC) output and the complexity of setting up the compute environment. Although AMD has significantly improved AV1 encoder quality, you are still more likely to transcode to H.264 or H.265 for compatibility reasons.
+
 
 A list of common codecs can be found [here](/docs/general/clients/codec-support/)
 
