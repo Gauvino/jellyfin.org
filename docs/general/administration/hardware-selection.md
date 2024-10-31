@@ -138,7 +138,6 @@ Intel is always recommended on non-apple hardware for the following reasons:
 
 AMD is not recommended due to the poor quality of H.264 and H.265 (HEVC) output and the complexity of setting up the compute environment. Although AMD has significantly improved AV1 encoder quality, you are still more likely to transcode to H.264 or H.265 for compatibility reasons.
 
-
 A list of common codecs can be found [here](/docs/general/clients/codec-support/)
 
 The following is a list of video codecs Jellyfin supports transcoding to:

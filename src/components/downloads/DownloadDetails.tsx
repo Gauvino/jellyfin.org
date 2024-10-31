@@ -61,7 +61,7 @@ const FfmpegBadge = ({ features }: { features: Array<Feature> }) => {
     return (
       <span
         className='badge badge--warning margin-right--sm'
-        title='Jellyfin&#39;s custom build of ffmpeg is not available for this platform. Some features like tonemapping may
+        title='Jellyfin&#39;s custom build of ffmpeg is not available for this platform. Some features like tone mapping may
     not work correctly without this.'
       >
         Custom FFmpeg Unavailable
